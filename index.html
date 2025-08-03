@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#000000" />
+  <title>Advanced Calculator</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"/>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      html,
+      body {
+        background-color: black;
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        color-scheme: dark;
+        overflow: hidden;
+        background-image: url("./Images/background.jpg");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+      }
+      body {
+        padding-bottom: env(safe-area-inset-bottom);
+      }
+      .buttons .key-button{
+        font-size: 20px;
+        font-weight: 500;
+        padding: 8px 10px;
+      }
+      @media (max-width: 440px) {
+      .buttons .key-button{
+        padding: 15px 3px;
+        font-size: 28px;
+      }
+      }
+    </style>
+</head>
+<body >
+  <div class="flex justify-center items-end  h-screen  min-[440px]:items-center">
+    <div class="w-full max-w-[260px] max-[440px]:max-w-full bg-black  min-[440px]:rounded-3xl shadow-2xl border border-gray-700 p-5 pt-24 max-[440px]:h-screen">
+    <input type="text" id="input" disabled class="w-full py-1 overflow-x-auto text-[35px] text-white bg-black text-end whitespace-nowrap pr-7"/>
+    <input type="text" id="result" disabled class="w-full px-5 pb-10 text-4xl text-gray-300 bg-black text-end"/>
+
+    <div class="grid grid-cols-4 gap-2 buttons">
+      <button class="text-white bg-gray-500 rounded-full key-button">C</button>
+      <button class="text-white bg-gray-500 rounded-full key-button">%</button>
+      <button class="text-white bg-gray-500 rounded-full key-button">( )</button>
+      <button class="text-white bg-orange-500 rounded-full key-button">÷</button>
+
+      <button class="text-white bg-gray-800 rounded-full key-button">7</button>
+      <button class="text-white bg-gray-800 rounded-full key-button">8</button>
+      <button class="text-white bg-gray-800 rounded-full key-button">9</button>
+      <button class="text-white bg-orange-500 rounded-full key-button">x</button>
+
+      <button class="text-white bg-gray-800 rounded-full key-button">4</button>
+      <button class="text-white bg-gray-800 rounded-full key-button">5</button>
+      <button class="text-white bg-gray-800 rounded-full key-button">6</button>
+      <button class="text-white bg-orange-500 rounded-full key-button">-</button>
+
+      <button class="text-white bg-gray-800 rounded-full key-button">1</button>
+      <button class="text-white bg-gray-800 rounded-full key-button">2</button>
+      <button class="text-white bg-gray-800 rounded-full key-button">3</button>
+      <button class="text-white bg-orange-500 rounded-full key-button">+</button>
+
+      <button class="text-white bg-gray-800 rounded-full key-button">.</button>
+      <button class="text-white bg-gray-800 rounded-full key-button">0</button>
+      <button class="text-white bg-gray-800 rounded-full key-button">Del</button>
+      <button class="text-white bg-orange-500 rounded-full key-button">=</button>
+    </div>
+  </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/11.11.0/math.min.js"></script>
+  <script src="./app.js"></script>
+</body>
+</html>
+
+
+
+
+
+
